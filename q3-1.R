@@ -1,0 +1,5 @@
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv", destfile = "quiz3_q1_data.csv")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf",destfile="quiz3_q1_codebook.pdf",mode = "wb")
+q3_1 <- read.csv("quiz3_q1_data.csv")
+agricultureLogical<-(q3_1$ACR==3 & q3_1$AGS==6)
+which(agricultureLogical)
